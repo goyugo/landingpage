@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abajoo Implementasi Odoo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@300;600&display=swap");
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Nunito", sans-serif;
+        }
+
+        body {
+            background: #ff8c00;
+            background-image: radial-gradient(
+                    circle at 20% 100%,
+                    rgba(255, 223, 186, 0.1) 0%,
+                    rgba(255, 223, 186, 0.1) 33%,
+                    rgba(255, 149, 99, 0.1) 33%,
+                    rgba(255, 149, 99, 0.1) 66%,
+                    rgba(255, 92, 51, 0.1) 66%,
+                    rgba(255, 92, 51, 0.1) 99%
+                ),
+                linear-gradient(40deg, #ff6700, #ff8c00, #ffa500, #ffb347);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 50% 45%;
+            place-items: center;
+            gap: 60px;
+            min-height: 100vh;
+            padding: 20px 60px;
+        }
+
+        .content {
+            max-width: 2400px;
+        }
+
+        .content h1 {
+            font-family: "Comfortaa", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            margin-bottom: 36px;
+            color: #fff;
+        }
+
+        .content p {
+            font-size: clamp(0.9rem, 3vw, 1.25rem);
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .content button {
+            background: #fff;
+            color: #ff6700;
+            font-size: clamp(0.9rem, 4vw, 1rem);
+            font-weight: 600;
+            border: 0;
+            outline: 0;
+            padding: 8px 14px;
+            border-radius: 7px;
+            transform: scale(1);
+            transition: all 0.4s ease-in;
+            cursor: pointer;
+        }
+
+        .content button:is(:hover, :focus) {
+            transform: scale(0.98);
+            background-color: #ff6700;
+            color: #fff;
+        }
+
+        .swiper {
+            position: relative;
+            width: 400px;
+            height: 490px;
+        }
+
+        .swiper-slide {
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            user-select: none;
+            border-radius: 20px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .cost {
+            position: absolute;
+            top: 8px;
+            right: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            padding: 6px 10px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .overlay {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            padding: 10px 20px;
+            background: rgba(255, 105, 0, 0.2);
+            color: #fff;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .overlay h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .overlay p {
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .ratings {
+            display: flex;
+            column-gap: 10px;
+            margin-top: -6px;
+        }
+
+        .ratings span {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .star {
+            color: #ffe312;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="content">
+            <h1>Implementasi Odoo bersama Abajoo</h1>
+            <p>Optimalkan bisnis Anda dengan sistem Odoo yang fleksibel dan terintegrasi. Abajoo hadir untuk memastikan
+                implementasi yang tepat dan sesuai kebutuhan bisnis Anda.</p>
+            <button>Hubungi Kami</button>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://bek.link/gambarbebas/20240817-042750_odoo.jpg" alt="Gambar 1" />
+                    <div class="overlay">
+                        <h1>Paket Basic</h1>
+                        <p>Solusi cepat dan terjangkau untuk memulai bisnis Anda dengan Odoo.</p>
+                        <div class="ratings">
+                            <span>4.5</span>
+                            <i class="star">⭐</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://bek.link/gambarbebas/20240809-111358_accounting.webp" alt="Gambar 2" />
+                    <div class="overlay">
+                        <h1>Paket Advanced</h1>
+                        <p>Paket komprehensif untuk implementasi Odoo tingkat lanjut.</p>
+                        <div class="ratings">
+                            <span>4.8</span>
+                            <i class="star">⭐</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            effect: "cube",
+            grabCursor: true,
+            loop: true,
+            speed: 1000,
+            cubeEffect: {
+                shadow: false,
+                slideShadows: true,
+                shadowOffset: 10,
+                shadowScale: 0.94,
+            },
+            autoplay: {
+                delay: 2600,
+                pauseOnMouseEnter: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
